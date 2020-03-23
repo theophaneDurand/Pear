@@ -13,3 +13,4 @@ Chargé de TD : Benjamin Lussier
 | Shen | Likang | Etudiant |
 | Félix | Poullet-Pagès | Etudiant | 
 |Fromont | Charlotte | Etudiant |
+|Combary| Audrey | Etudiant |
