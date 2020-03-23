@@ -10,4 +10,5 @@ Chargé de TD : Benjamin Lussier
 | ------ | ------ | ------ |
 | Lussier | Benjamin | Professeur | 
 | Durand | Théophane | Etudiant|
-| Shen | Likang | Etudiant | 
+| Shen | Likang | Etudiant |
+| Félix | Poullet-Pagès | Etudiant | 
