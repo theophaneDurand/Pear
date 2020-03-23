@@ -12,3 +12,4 @@ Chargé de TD : Benjamin Lussier
 | Durand | Théophane | Etudiant|
 | Shen | Likang | Etudiant |
 | Félix | Poullet-Pagès | Etudiant | 
+|Fromont | Charlotte | Etudiant |
