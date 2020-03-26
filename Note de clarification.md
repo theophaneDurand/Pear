@@ -6,7 +6,7 @@ Dans le cadre de l'UV NF17, nous sommes amenés à mettre en place une base de d
 
 ### Acteurs du projet
 
-Maîtrise d'ouvrage : M. Lussiers, représentant de Pear
+Maîtrise d'ouvrage : M. Lussier, représentant de Pear
 
 Maîtrise d'oeuvre :
     
