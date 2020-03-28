@@ -1,0 +1,91 @@
+@startuml
+abstract class Logiciel{
+  NomDeve: string {key}
+  Nom: string {key}
+  DateLancement: date
+}
+class Version{
+  Numero: int {local key}
+  DateDisponibilite: date
+}
+class Probleme{
+  Date: date
+  Description: string
+}
+abstract class Correctif{
+  Date: date
+}
+class InstructionTextuelle{
+  Instruction: string
+}
+class PatchCorrectif{
+  ID: integer {key}
+}
+abstract class Personne{
+  Nom: string
+  Prenom: string
+  DateNaissance: date
+}
+
+class Employe{
+  Poste: integer
+}
+class Employe
+note left: {(Nom,Prenom,ddn,N_Poste) key}
+class Client{
+  Adresse: string
+  Telephone: integer {key}
+}
+class Achat{
+  Date: date
+}
+class Achat
+note right: Date>Date_lancement
+class OS
+abstract class Programme{
+  Type: string
+}
+class Application
+class Jeu
+class Plateforme{
+  Type: enum {Smartphone, Tablette, PC, Serveur}
+}
+Client--- Employe
+(Client, Employe) --|> Personne
+note top on link
+XOR
+end note
+
+Employe "1" -"*" Correctif: responsable >
+InstructionTextuelle - PatchCorrectif
+Correctif <|-- (InstructionTextuelle,PatchCorrectif)
+note right on link
+XOR
+end note
+
+Client"1..N" - "1..N" Probleme: fait remonter >
+Probleme"1..N" ---"*" Correctif: apporté au <
+Version "1"---"*" Probleme : detecte sur <
+Logiciel *-- "0.N" Version
+Logiciel "*" ---"1..N"Client : achete >
+Achat..(Client,Logiciel)
+
+Logiciel <|-- (Programme,OS)
+note right on link
+XOR
+end note
+Programme "*"---"1..N" OS: supporte >
+
+OS "1..N"-"1..N" Plateforme: supporte <
+
+Application-Jeu
+Programme <|-- (Application,Jeu)
+note right on link
+XOR
+end note
+
+
+
+
+
+@enduml
