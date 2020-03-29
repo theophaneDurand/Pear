@@ -1,14 +1,15 @@
 @startuml
+
 abstract class Logiciel{
   NomDeve: string {key}
   Nom: string {key}
   DateLancement: date
 }
 class Version{
-  Numero: int {local key}
-  DateDisponibilite: date
+  Numéro: int {local key}
+  DateDisponibilité: date
 }
-class Probleme{
+class Problème{
   Date: date
   Description: string
 }
@@ -23,24 +24,23 @@ class PatchCorrectif{
 }
 abstract class Personne{
   Nom: string
-  Prenom: string
+  Prénom: string
   DateNaissance: date
 }
-
-class Employe{
+class Employé{
   Poste: integer
 }
-class Employe
-note left: {(Nom,Prenom,ddn,N_Poste) key}
+class Employé
+note left: {(Nom,Prénom,DateNaissance,Poste) key}
 class Client{
   Adresse: string
-  Telephone: integer {key}
+  Téléphone: integer {key}
 }
 class Achat{
   Date: date
 }
 class Achat
-note right: Date>Date_lancement
+note right: Date>DateLancement
 class OS
 abstract class Programme{
   Type: string
@@ -50,42 +50,34 @@ class Jeu
 class Plateforme{
   Type: enum {Smartphone, Tablette, PC, Serveur}
 }
-Client--- Employe
-(Client, Employe) --|> Personne
+Client--- Employé
+(Client, Employé) --|> Personne
 note top on link
 XOR
 end note
 
-Employe "1" -"*" Correctif: responsable >
+Employé "1" -"*" Correctif: responsable >
 InstructionTextuelle - PatchCorrectif
 Correctif <|-- (InstructionTextuelle,PatchCorrectif)
 note right on link
 XOR
 end note
-
-Client"1..N" - "1..N" Probleme: fait remonter >
-Probleme"1..N" ---"*" Correctif: apporté au <
-Version "1"---"*" Probleme : detecte sur <
+Client "1..N" - "*" Problème: fait remonter >
+Problème "1" ---"*" Correctif: apporté au <
+Version "1"---"*" Problème : detecte sur <
 Logiciel *-- "0.N" Version
-Logiciel "*" ---"1..N"Client : achete >
+Logiciel "*" ---"1..N"Client : achète <
 Achat..(Client,Logiciel)
-
 Logiciel <|-- (Programme,OS)
 note right on link
 XOR
 end note
 Programme "*"---"1..N" OS: supporte >
-
-OS "1..N"-"1..N" Plateforme: supporte <
-
+OS "1..N"-"1..N" Plateforme: supporte >
 Application-Jeu
 Programme <|-- (Application,Jeu)
 note right on link
 XOR
 end note
-
-
-
-
 
 @enduml
