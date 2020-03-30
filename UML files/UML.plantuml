@@ -1,5 +1,5 @@
 @startuml
-
+note "Tous les attributs sont NOT NULL" as N1
 abstract class Logiciel{
   NomDeve: string {key}
   Nom: string {key}
@@ -27,11 +27,12 @@ abstract class Personne{
   Prénom: string
   DateNaissance: date
 }
+abstract class Personne
 class Employé{
   Poste: integer
 }
 class Employé
-note left: {(Nom,Prénom,DateNaissance,Poste) key}
+note top: {(Nom,Prénom,DateNaissance,Poste) key}
 class Client{
   Adresse: string
   Téléphone: integer {key}
@@ -40,7 +41,7 @@ class Achat{
   Date: date
 }
 class Achat
-note right: Date>DateLancement
+note LEFT: {(Client,Logiciel,Date) key\n\nDate>DateLancement}
 class OS
 abstract class Programme{
   Type: string
@@ -48,36 +49,40 @@ abstract class Programme{
 class Application
 class Jeu
 class Plateforme{
-  Type: enum {Smartphone, Tablette, PC, Serveur}
+  Type: string
 }
-Client--- Employé
-(Client, Employé) --|> Personne
+class ProgrammeType{
+  Type: string
+}
+
+Client-- Employé
+Personne <|-- (Client, Employé)
 note top on link
 XOR
 end note
-
-Employé "1" -"*" Correctif: responsable >
+Employé "1" -"0..N" Correctif: responsable >
 InstructionTextuelle - PatchCorrectif
 Correctif <|-- (InstructionTextuelle,PatchCorrectif)
 note right on link
 XOR
 end note
-Client "1..N" - "*" Problème: fait remonter >
-Problème "1" ---"*" Correctif: apporté au <
-Version "1"---"*" Problème : detecte sur <
-Logiciel *-- "0.N" Version
-Logiciel "*" ---"1..N"Client : achète <
+Client "1..N" - "0..N" Problème: fait remonter >
+Problème "1" ---"0..N" Correctif: apporté au <
+Version "1"---"0..N" Problème : detecte sur <
+Logiciel *-- "1..N" Version
+Logiciel "1..N" ---"0..N"Client : achète <
 Achat..(Client,Logiciel)
 Logiciel <|-- (Programme,OS)
 note right on link
 XOR
 end note
-Programme "*"---"1..N" OS: supporte >
+Programme "0..N"---"1..N" OS: supporte >
 OS "1..N"-"1..N" Plateforme: supporte >
 Application-Jeu
 Programme <|-- (Application,Jeu)
 note right on link
 XOR
 end note
+Programme "0..N" - "1..N" ProgrammeType: est >
 
 @enduml
