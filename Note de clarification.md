@@ -1,4 +1,3 @@
-
 # Note de clarification projet Pear
 
 ## Contexte du projet
@@ -76,3 +75,9 @@ Finalement, on veut savoir qui a remonté les problèmes et qui était responsab
 Pear est intéressé par différentes requêtes, comme le nombre de problèmes non corrigés pour chaque version de ses logiciels, quelles applications tournant sur tablettes ont eu plus d'un correctif, ou quels clients ont remonté des problèmes sur des logiciels qu'ils ne possèdent pas.
 
 
+
+### Crédits
+
+Nous nous sommes inspirés du travail de JB Leger : https://gitlab.utc.fr/legerjea/nfa178_random_stuff/-/blob/master/contraintes_trigger.md
+sous licence [CC BY](https://creativecommons.org/licenses/by/4.0/)
+https://creativecommons.org/licenses/by/4.0/
