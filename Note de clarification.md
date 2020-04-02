@@ -80,4 +80,3 @@ Pear est intéressé par différentes requêtes, comme le nombre de problèmes n
 
 Nous nous sommes inspirés du travail de JB Leger : https://gitlab.utc.fr/legerjea/nfa178_random_stuff/-/blob/master/contraintes_trigger.md
 sous licence [CC BY](https://creativecommons.org/licenses/by/4.0/)
-https://creativecommons.org/licenses/by/4.0/
