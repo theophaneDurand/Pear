@@ -1,4 +1,3 @@
-
 # Relationnel :
 
 ## Relations :
@@ -75,21 +74,21 @@ Projection(**ProgrammeType**, Type) = Projection(**EstDeType**, type)
 
 **Correctif.**instructionText NULL ABLE
 
-**Correctif.**type=Instruction AND **Correctif.**instructionText
+**Correctif**.type=Instruction AND **Correctif.**instructionText
 
-**Correctif.**type=Patch AND **Correctif.**idPatch
+**Correctif**.type=Patch AND **Correctif.**idPatch
 
-NOT (**Correctif.**type=Instruction AND **Correctif.**idPatch)
+NOT (**Correctif**.type=Instruction AND **Correctif.**idPatch)
 
-NOT (**Correctif.**type=Patch AND instructionText)
+NOT (**Correctif**.type=Patch AND instructionText)
 
 ## DF et Normalisation : 
 
 **Logiciel** :
 
-	NomDeve-> Nom, DateLancement
+NomDeve-> Nom, DateLancement
 
- Nom->NomDeve, DateLancement 
+Nom->NomDeve, DateLancement 
 
 Possède une clé et attributs atomiques ->1NF 
 
