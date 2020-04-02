@@ -50,8 +50,11 @@
 
 **vPersonne**=UNION ( PROJECTION(Employe,nom,prenom, dateNaissance), PROJECTION(Client,nom,prenom,dateNaissance))
 
-**vOSandProgramme** = UNION ( PROJECTION(OS, NomDeveOS), PROJECTION(Programme, NomDeveProg))        *//Cette vue ous permet de visualiser la contrainte*
-    `INTERSECTION (PROJECTION(**OS**,NomDevOS), PROJECTION(**Programme**,NomDevProg)) = {}`
+**vOSandProgramme** = UNION ( PROJECTION(OS, NomDeveOS), PROJECTION(Programme, NomDeveProg))       
+
+*//Cette vue ous permet de visualiser la contrainte*
+
+`INTERSECTION (PROJECTION(**OS**,NomDevOS), PROJECTION(**Programme**,NomDevProg)) = {}`
 
 ## Contraintes :
 
