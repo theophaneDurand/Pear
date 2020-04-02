@@ -1,8 +1,7 @@
 
+# Relationnel :
 
-Relationnel :
-
-**<span style="text-decoration:underline;"><span style="text-decoration:underline;">Relations :</span>**
+## Relations :
 
 **Logiciel**(#NomDeve: string , Nom: string, DateLancement: date) avec Nom UNIQUE
 
@@ -50,7 +49,7 @@ Relationnel :
 
 **vPersonne**=UNION ( PROJECTION(Employe,nom,prenom, dateNaissance), PROJECTION(Client,nom,prenom,dateNaissance))
 
-**<span style="text-decoration:underline;"><span style="text-decoration:underline;">Contraintes :</span>**
+## Contraintes :
 
 Tous les attributs sont NOT NULL
 
@@ -84,7 +83,7 @@ NOT (**Correctif.**type=Instruction AND **Correctif.**idPatch)
 
 NOT (**Correctif.**type=Patch AND instructionText)
 
-**<span style="text-decoration:underline;"><span style="text-decoration:underline;">DF et Normalisation</span>** : 
+## DF et Normalisation : 
 
 **Logiciel** :
 
@@ -97,21 +96,21 @@ Possède une clé et attributs atomiques ->1NF
 Clé composée d'un seul attribut -> 2NF 
 
 
-    Seul l'attribut DateLancement n'appartient pas à une clé candidate mais il dépend directement de clé candidates (Nom et NomDeve) -> 3NF
+Seul l'attribut DateLancement n'appartient pas à une clé candidate mais il dépend directement de clé candidates (Nom et NomDeve) -> 3NF
 
 **Client **:
 
-	Telephone -> Adresse, Nom, Prenom, DateNaissance
+Telephone -> Adresse, Nom, Prenom, DateNaissance
 
 	
 
-	Possède une clé et attributs atomiques -> 1NF
+Possède une clé et attributs atomiques -> 1NF
 
-	Un seul attribut détermine tous les autres -> 3NF
+Un seul attribut détermine tous les autres -> 3NF
 
 **Achat** :
 
-	NomLogiciel -> {} 
+NomLogiciel -> {} 
 
 Tel -> {} 
 
@@ -121,7 +120,7 @@ Relation toute clé -> 3NF
 
 **Version** : 
 
-	NomLogiciel, Numero  ->  {DateDisponibilite} 
+NomLogiciel, Numero  ->  {DateDisponibilite} 
 
 Possède une clé et attributs atomiques -> 1NF
 
