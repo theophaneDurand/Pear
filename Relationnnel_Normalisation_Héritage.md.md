@@ -137,3 +137,8 @@ Pas de sous-partie de la clé qui détermine un attribut non-clé ->
 
 Aucun attribut non clé ne dépend d’un autre attribut non clé -> 3NF
 
+# Justification des héritages:
+
+Pour la classe Correctif, nous avons choisi de faire un héritage par classe fille, d’une part car la classe mère est abstraite mais surtout pour une question de simplification de l’utilisation de la base de donnée. En effet dans le cas d’une requête concernant les correctifs appliqués aux problèmes, il est plus simple d’implémenter une seule classe (et donc un héritage par classe mère) que deux classes filles qui nécessiteraient alors l’utilisation d’une jointure.
+Quant à la classe Personne, nous avons préféré faire un héritage par classe fille car la classe mère est abstraite et les classes filles sont impliquées dans des associations non symétriques qu’il aurait été très difficile de modéliser.
+
