@@ -2,6 +2,8 @@
 
 ## Relations :
 
+### Tables :
+
 **Logiciel**(#NomDeve: string , Nom: string, DateLancement: date) avec Nom UNIQUE
 
 **Achat**(#NomLogiciel=>Logiciel.NomDeve,#Client=>Client.Telephone, #Date: date)
@@ -32,7 +34,7 @@
 
 **RemonterProbleme**(#client->Client.telephone, #dateProbleme->Probleme.date, #versionProbleme->Probleme.Logiciel, #numProbleme->Probleme.numVersion)
 
-**<span style="text-decoration:underline;"><span style="text-decoration:underline;">Vue :</span>**
+### Vue :
 
 **vOS** = Jointure(Logiciel, OS, Logiciel.NomDeve= OS.NomDevOS)
 
