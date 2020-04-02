@@ -84,7 +84,7 @@ NOT (**Correctif**.type=Instruction AND **Correctif.**idPatch)
 
 NOT (**Correctif**.type=Patch AND instructionText)
 
-## DF et Normalisation : 
+# DF et Normalisation : 
 
 **Logiciel** :
 
