@@ -1,4 +1,6 @@
 @startuml
+skinparam monochrome true
+hide circle
 note "Tous les attributs sont NOT NULL" as N1
 abstract class Logiciel{
   NomDeve: string {key}
