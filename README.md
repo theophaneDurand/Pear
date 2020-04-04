@@ -20,11 +20,11 @@ Le dépot est constitué de plusieurs fichier et dossier :
 
 ### 1) dossier UML files
 
-#### UML.plantuml
+##### UML.plantuml
 
 Fichier contenant le code plantUML premettant la réalisation du diagramme UML du projet Pear.
 
-#### UML.png et UML.svg 
+##### UML.png et UML.svg 
 
 Fichiers permettant de visualiser le diagramme UML en format png ou svg.
 
