@@ -101,7 +101,7 @@ Clé composée d'un seul attribut -> 2NF
 
 Seul l'attribut DateLancement n'appartient pas à une clé candidate mais il dépend directement de clé candidates (Nom et NomDeve) -> 3NF
 
-**Client **:
+**Client**:
 
 Telephone -> Adresse, Nom, Prenom, DateNaissance
 
