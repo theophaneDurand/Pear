@@ -1,3 +1,4 @@
+
 # Relationnel :
 
 ## Relations :
@@ -139,6 +140,15 @@ Aucun attribut non clé ne dépend d’un autre attribut non clé -> 3NF
 
 # Justification des héritages:
 
-Pour la classe Correctif, nous avons choisi de faire un héritage par classe fille, d’une part car la classe mère est abstraite mais surtout pour une question de simplification de l’utilisation de la base de donnée. En effet dans le cas d’une requête concernant les correctifs appliqués aux problèmes, il est plus simple d’implémenter une seule classe (et donc un héritage par classe mère) que deux classes filles qui nécessiteraient alors l’utilisation d’une jointure.
-Quant à la classe Personne, nous avons préféré faire un héritage par classe fille car la classe mère est abstraite et les classes filles sont impliquées dans des associations non symétriques qu’il aurait été très difficile de modéliser.
+### Classe Correctif ("Instruction Textuelle" et "Patch Correctif") : 
+Nous avons choisi de faire un héritage par classe Mère, d’une part car la classe mère est abstraite, de plus il s'agit d'un héritage presque complet (un seul attribut propre aux classes filles) mais surtout pour une question de simplification de l’utilisation de la base de donnée. En effet dans le cas d’une requête concernant les correctifs appliqués aux problèmes, il est plus simple d’implémenter une seule classe (et donc un héritage par classe mère) que deux classes filles qui nécessiteraient alors l’utilisation d’une jointure.
+
+### Classe Personne ("Client" et "Employé") :
+Nous avons préféré faire un héritage par classe fille car la classe mère est abstraite et les classes filles sont impliquées dans des associations non symétriques qu’il aurait été très difficile de modéliser. De plus il s'agit d'un héritage exclusif.
+ 
+### Classe Logiciel ("OS" et "Programme") :
+Nous avons choisi un héritage par référence car il ne s'agit pas d'un héritage complet, en effet les classes "OS" et "Programmes" sont elles même des classes mère ou bien sont associées à d'autres classes. Un héritage par classe mère n'était donc pas souhaitable. De plus il y a des associations N:M sur la classe mère donc il n'était pas non plus souhaitable de choisir un héritage par classe filles. Le plus cohérent était donc de choisir l'héritage par référence.
+
+### Classe Programme ("Application" et "Jeu") :
+Nous avons choisi de faire un héritage par classe mère car il s'agit d'un héritage complet. De plus la classe mère a une association N:M et l'héritage est exclusif. Autant d'argument qui rendent l'héritage par classe mère cohérent.
 
