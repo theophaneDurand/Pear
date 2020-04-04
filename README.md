@@ -47,7 +47,7 @@ Ce fichier est le code SQL permettant d'insérer les données directement dans l
 
 ### 6) requetes.sql
 
-Fichier contenant le code sql des différetnes requetes demandées par le client (ainsi que certaines requetes en relationnelles en commentaires)
+Fichier contenant le code sql des différetnes requetes demandées par le client (ainsi que certaines requetes en algèbre relationnelles en commentaires)
 
 ### 7) suppressionTables.sql
 
