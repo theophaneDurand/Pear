@@ -11,7 +11,7 @@ GROUP BY (p.Logiciel, p.numVersion);
 
 --quelles applications tournant sur tablettes ont eu plus d'un correctif, 
 --SQL
-SELECT pg.NomDevProg,COUNT(c.id) AS ncorrectif
+SELECT pg.NomDevProg,COUNT(DISTINCT(c.id)) AS ncorrectif
 FROM SupporterOPlat s1, SupporterOProg s2,Programme pg, Correctif c
 WHERE s1.type='tablette'
 AND pg.type='application'
@@ -19,7 +19,8 @@ AND s2.Programme = pg.NomDevProg
 AND s1.NomDevOS = s2.OS
 AND c.pversion = pg.NomDevProg
 GROUP BY pg.NomDevProg
-HAVING COUNT(c.id)>1;
+HAVING COUNT(DISTINCT(c.id))>1;
+
 
 --quels clients ont remonté des problèmes sur des logiciels qu'ils ne possèdent pas.
 --Algèbre
