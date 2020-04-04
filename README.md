@@ -16,7 +16,8 @@ Chargé de TD : Benjamin Lussier
 |Combary| Audrey | Développeur |
 
 ## Description du dépot :
-Le dépot est constitué de plusieurs fichier et dossier :
+Le dépot est constitué de plusieurs fichier et dossier.
+Ce projet à été réalisé en SQL pour le SGBD Postgres.
 
 ### 1) dossier UML files
 
