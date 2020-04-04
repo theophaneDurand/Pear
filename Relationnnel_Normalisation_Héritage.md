@@ -1,4 +1,3 @@
-
 # Relationnel :
 
 ## Relations :
@@ -81,15 +80,11 @@ Projection(**ProgrammeType**, Type) = Projection(**EstDeType**, type)
 
 **Correctif**.idPatch NULL ABLE
 
-**Correctif.**instructionText NULL ABLE
+**Correctif**.instructionText NULL ABLE
 
-**Correctif**.type=Instruction AND **Correctif.**instructionText
+(**Correctif**.type=Instruction AND **Correctif**.instructionText) OR (**Correctif**.type=Patch AND **Correctif**.idPatch)
 
-**Correctif**.type=Patch AND **Correctif.**idPatch
-
-NOT (**Correctif**.type=Instruction AND **Correctif.**idPatch)
-
-NOT (**Correctif**.type=Patch AND instructionText)
+(NOT (**Correctif**.type=Instruction AND **Correctif**.idPatch)) OR (NOT (**Correctif**.type=Patch AND instructionText))
 
 # DF et Normalisation : 
 
