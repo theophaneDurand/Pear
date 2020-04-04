@@ -16,10 +16,10 @@ Chargé de TD : Benjamin Lussier
 |Combary| Audrey | Développeur |
 
 ## Description du dépot :
-Le dépot est constitué de plusieurs fichier et dossier.
-Ce projet à été réalisé en SQL pour le SGBD Postgres.
+Le dépot est constitué de plusieurs fichiers et dossiers.
+Ce projet a été réalisé en SQL pour le SGBD Postgres.
 
-### 1) dossier UML files
+### 1) Dossier UML files
 
 ##### UML.plantuml
 
@@ -29,7 +29,7 @@ Fichier contenant le code plantUML premettant la réalisation du diagramme UML d
 
 Fichiers permettant de visualiser le diagramme UML en format png ou svg.
 
-### 2) Note de flarification.md
+### 2) Note de clarification.md
 
 Fichier contenant la note de clarification du projet.
 
@@ -39,16 +39,16 @@ Fichier contenant le MLD relationnel, l'explication et les justifications de la 
 
 ### 4) creationTable.sql
 
-Fichier contenant le code SQL permettant la création des tables de la base de donnée du projet
+Fichier contenant le code SQL permettant la création des tables de la base de donnée du projet.
 
 ### 5) donnees.sql 
 
 Fichier contenant des données de test afin de verifier le bon fonctionnement de la base de donnée.
-Ce fichier est le code SQL permettant d'insérer les données directement dans les tables crées par le fichier creationTables.sql
+Ce fichier est le code SQL permettant d'insérer les données directement dans les tables crées par le fichier creationTables.sql.
 
 ### 6) requetes.sql
 
-Fichier contenant le code sql des différetnes requetes demandées par le client (ainsi que certaines requetes en algèbre relationnelles en commentaires)
+Fichier contenant le code SQL des différetnes requetes demandées par le client (ainsi que certaines requêtes en algèbre relationnelle en commentaires).
 
 ### 7) suppressionTables.sql
 
